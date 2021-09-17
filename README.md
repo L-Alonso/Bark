@@ -6,7 +6,7 @@ and other canine-friendly venues to enjoy with their furry friends.
 
 ## Built With
 * HTML 
-* CSS
+* Bulma
 * JavaScript 
 * Google Places (https://developers.google.com/maps)
 * National Park Service API (https://www.nps.gov/subjects/developer/index.htm)
