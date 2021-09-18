@@ -6,56 +6,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title></title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
 </head>
 
-<body class="has-background-success-light" style="width:100%; height:100%; background-image: url(https://images.unsplash.com/photo-1473448912268-2022ce9509d8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80;);">
-    <nav class="navbar has-background-success-dark" role="navigation" aria-label="main navigation">
+<body class="has-navbar-fixed-top has-background-success-light" style="background-image: url(https://images.unsplash.com/photo-1473448912268-2022ce9509d8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80;);">
+    <nav class="navbar is-fixed-top has-background-success-dark" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
-            <h1 class="navbar-item has-text-white is-size-3">
+            <span class="navbar-item has-text-white is-size-3"></h1>
                 Project-1
-            </h1>
+            </span>
         </div>
         <div class="navbar-menu">
             <a class="navbar-item has-text-white is-size-5" href="">
                 <span class="icon has-text-white">
-                    <i class="icon"></i>
+                    <i class="fas fa-home"></i>
                 </span>
                 <span>Home</span>
             </a>
         </div>
     </nav>
-    <section class="hero m-6 is-mobile is-align-content-center is-fullheight-with-navbar">
-        <div class="tile is-ancestor p-3">
-            <div class="tile is-7 is-vertical is-parent">
-                <article class="tile box is-child is-5 has-background-white" style="height: fit-content;">
-                    <div class="field has-addons">
-                        <div class="control">
-                            <input class="input" id="park-search" type="text" placeholder="Search for a Park">
-                        </div>
-                        <div class="control">
-                            <button class="button is-success" id="search-btn">Search</button>
+    <section class="hero mx-6 pt-6 is-mobile is-align-content-center is-fullheight-with-navbar">
+        <div class="tile is-12 is-ancestor p-3">
+            <div class="tile is-4 is-vertical is-parent">
+                <article class="tile box is-child has-background-white" style="height: fit-content;">
+                    <div class="panel" id="search-panel">
+                        <div class="panel-block is-justify-content-center">
+                            <div class="field has-addons is-flex-grow-1">
+                                <div class="control has-icons-left is-flex-grow-1">
+                                    <span class="icon">
+                                        <i class="fas fa-search" aria-hidden="true"></i>
+                                    </span>
+                                    <input class="input" id="park-search" type="text" placeholder="Search for park">
+                                </div>
+                                <div class="control">
+                                    <button class="button is-success" id="search-btn">
+                                        Search
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <p class="title block has-text-centered" id="nat-park-name"></p>
-                    <p class="subtitle is-2 has-text-centered">Info</p>
-                    <figure class="has-text-centered" id="nat-park-info">
-                    </figure>
+                    <div id="nat-park-info" style="display:none">
+                        <p class="title block has-text-centered" id="nat-park-name"></p>
+                        <p class="has-text-centered" id="nat-park-description"></p>
+                    </div>
                 </article>
             </div>
-            <div class="tile is-7 is-vertical is-parent">
-                <article class="tile box is-child is-7 has-background-white" style="height: fit-content;">
-                    <figure class="image is-square" id="nat-park-map">
-                        <img src="https://www.nps.gov/crla/planyourvisit/images/Crater-Inset-Map-winter-version-for-Website-with-red-roads-10-314-01.jpg?maxwidth=1200&maxheight=1200&autorotate=false">
-                    </figure>
+            <div class="tile is-8 is-vertical is-parent" id="map-container" style="display:none">
+                <article class="tile box is-child has-background-white" style="height: fit-content;">
+                    <div id="nat-park-map" style="height:500px;">
+                    </div>
                 </article>
             </div>
         </div>
-        <a class="button is-normal has-background-success-light is-fullwidth" href="https://www.nps.gov/crla/index.htm">Learn More
+        <a class="button is-normal has-background-success-light is-fullwidth" id="nps-website" href="https://www.nps.gov/index.htm" target="_blank">Learn More
             </a>
     </section>
-    <div class="hero-foot">
-
-    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA6PPvRcVtW9IYbZoNZHRNLzv369862KVs&v=weekly" async></script>
     <script src="./js/script.js"></script>
 
 </body>
