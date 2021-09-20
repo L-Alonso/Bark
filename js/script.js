@@ -1,3 +1,4 @@
+// globlal variables
 var searchParkEl = $("#park-search");
 var natParkNameEl = $("#nat-park-name");
 var natParkInfoEl = $("#nat-park-info");
@@ -11,6 +12,7 @@ var map = null;
 var npsApiKey = "BccmWNanuJv5sB3a6yzsSqXUZVNxkR7YdgC6BACq";
 var mapApiKey = "AIzaSyA6PPvRcVtW9IYbZoNZHRNLzv369862KVs";
 
+// get latitude and longitude from NPS api for google map to reference
 function initMap(lat, lng) {
     mapEl.show();
     map = new google.maps.Map(document.getElementById("nat-park-map"), {
@@ -18,7 +20,7 @@ function initMap(lat, lng) {
         zoom: 8,
     });
 }
-
+// display fetched NPS info and google map
 function showParkInfo() {
     natParkInfoEl.show();
     natParkNameEl.text(selectedPark.fullName);
@@ -26,11 +28,11 @@ function showParkInfo() {
     natParkUrl.attr("href", selectedPark.url);
     initMap(Number(selectedPark.latitude), Number(selectedPark.longitude));
 }
-
+// clear search result
 function clearSearchResults() {
     $(".search-result").remove();
 }
-
+// create new div for each search result 
 function addSearchResult(result) {
     var searchResult = $("<div>");
     searchResult.addClass("panel-block search-result");
@@ -46,7 +48,7 @@ function addSearchResult(result) {
     })
 }
 
-
+// search for park names in NPS api
 function parkSearch(parkName) {
     var apiUrl = "https://developer.nps.gov/api/v1/parks?q=" + parkName + "&api_key=" + npsApiKey;
     fetch(apiUrl).then(function(response) {
@@ -66,7 +68,7 @@ function parkSearch(parkName) {
             console.error(error);
         });
 }
-
+// begin park name search on button click
 $("#search-btn").click(function() {
     var searchInput = searchParkEl.val();
     parkSearch(searchInput);
