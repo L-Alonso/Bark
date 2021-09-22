@@ -1,4 +1,4 @@
-# project-1
+# Bark
 
 ## Purpose
 A web application designed to provide dog owners with a resource to facilitate finding local city or national parks, 
@@ -8,19 +8,16 @@ and other canine-friendly venues to enjoy with their furry friends.
 * HTML 
 * Bulma
 * JavaScript 
-<<<<<<< HEAD
-* Google Places (https://developers.google.com/maps)
-=======
 * JQuery
 * FontAwesome
 * Google Places and Google Maps (https://developers.google.com/maps)
->>>>>>> develop
 * National Park Service API (https://www.nps.gov/subjects/developer/index.htm)
 
 ## Website 
-https://
+https://btantillo.github.io/bark
 
-<img src="" alt="Screenshot of website"/>
+<img src="./images/home-page screenshot.jpg" alt="Screenshot of homepage"/>
+<img src="./images/home-page screenshot.jpg" alt="Screenshot of national park page"/>
 
 ## Contribution 
 Made by Luis Gallardo, Shayne Lemons, and Ben Tantillo
