@@ -69,8 +69,7 @@ function parkSearch(parkName) {
             console.error(error);
         });
         localStorage.setItem(parkName, parkName );
-        var parkPlace = localStorage.getItem(parkName)
-        alert("Enjoy Your Adventure to " + parkPlace)
+        
 
 }
 
