@@ -17,12 +17,83 @@
                 <img src="/Users/luisgallardo/Desktop/Project/project-1/images/icons8-dog-100.png" alt="site logo" style="max-height: 100px" class="py-2"/>
             </span>
         </div>
-        <div class="navbar-menu" id="navbar-links">
-            <div class ="navbar-end">
-                <a class="navbar-item has-text-white">Home</a>
-                <a class="navbar-item has-text-white">About us</a>
-                <a class="navbar-item has-text-white">Contact us</a>
-              
+        <div class="navbar-menu">
+            <div class="navbar-start">
+            </div>
+            <div class="navbar-end">
+                <div class="navbar-item has-text-white is-size-3">
+                    <a class="button has-icons-left has-background-success-dark has-text-white" style="border:none" href="">
+                        <span class="icon has-text-white">
+                    <i class="fas fa-home"></i>
+                    </span>
+                        <span>Home</span>
+                    </a>
+                </div>
+                <div class="navbar-item has-text-white is-size-3">
+                    <button class="button has-icons-left has-background-success-dark has-text-white" style="border:none" id="about-us-btn">
+                        <span class="icon">
+                            <i class="fas fa-user-friends"></i>
+                        </span>
+                        <span>
+                            About Us
+                        </span> 
+                    </button>
+                    <div class="modal" id="about-us-modal">
+                        <div class="modal-background"></div>
+                        <div class="modal-card">
+                            <header class="modal-card-head has-background-success-dark">
+                                <p class="modal-card-title has-text-centered has-text-white">About Us</p>
+                                <button class="delete" id="about-us-close" aria-label="close"></button>
+                            </header>
+                            <section class="modal-card-body has-background-success-light has-text-black">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            </section>
+                        </div>
+                    </div>
+                </div>
+                <div class="navbar-item has-text-white is-size-3">
+                    <button class="button has-icons-left has-background-success-dark has-text-white" style="border:none" id="contact-us-btn">
+                        <span class="icon">
+                            <i class="fas fa-envelope"></i>
+                        </span>
+                        <span>
+                            Contact Us
+                        </span>   
+                    </button>
+                    <div class="modal" id="contact-us-modal">
+                        <div class="modal-background"></div>
+                        <div class="modal-card">
+                            <header class="modal-card-head has-background-success-dark">
+                                <p class="modal-card-title has-text-centered has-text-white">Contact Us</p>
+                                <button class="delete" id="contact-us-close" aria-label="close"></button>
+                            </header>
+                            <section class="modal-card-body has-background-success-light has-text-black">
+                                <h3>Project Member 1:</h3>
+                                <ul>
+                                    <li>
+                                        <a href="githubrepositoryhere">GitHub</a>
+                                    </li>
+                                    <li><a href="mailto:(your email here)">Email</a></li>
+                                </ul>
+                                <h3>Project Member 1:</h3>
+                                <ul>
+                                    <li>
+                                        <a href="githubrepositoryhere">GitHub</a>
+                                    </li>
+                                    <li><a href="mailto:(your email here)">Email</a></li>
+                                </ul>
+                                <h3>Project Member 1:</h3>
+                                <ul>
+                                    <li>
+                                        <a href="githubrepositoryhere">GitHub</a>
+                                    </li>
+                                    <li><a href="mailto:(your email here)">Email</a></li>
+                                </ul>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </nav>
     <section class="hero mx-6 pt-6 is-mobile is-align-content-center is-fullheight-with-navbar">
