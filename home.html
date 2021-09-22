@@ -1,38 +1,128 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Home</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
-<body class="has-navbar-fixed-top has-background-success-light">
+<body class="has-navbar-fixed-top has-background-success-light" style="background-image: url(https://wallpapercave.com/wp/wp1889002.jpg);">
     <nav class="navbar is-fixed-top has-background-success-dark" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
             <span class="navbar-item has-text-white is-size-3"></h1>
                 <img src="/Users/luisgallardo/Desktop/Project/project-1/images/icons8-dog-100.png" alt="site logo" style="max-height: 100px" class="py-2"/>
+                <p>Bark!</p>
             </span>
         </div>
-        <div class="navbar-menu" id="navbar-links">
-            <div class ="navbar-end">
-                <a class="navbar-item has-text-white">Home</a>
-                <a class="navbar-item has-text-white">About us</a>
-                <a class="navbar-item has-text-white">Contact us</a>
-              
+        <div class="navbar-menu">
+            <div class="navbar-start">
+            </div>
+            <div class="navbar-end">
+                <div class="navbar-item has-text-white is-size-3">
+                    <a class="button has-icons-left has-background-success-dark has-text-white" style="border:none" href="">
+                        <span class="icon has-text-white">
+                    <i class="fas fa-home"></i>
+                    </span>
+                        <span>Home</span>
+                    </a>
+                </div>
+                <div class="navbar-item has-text-white is-size-3">
+                    <button class="button has-icons-left has-background-success-dark has-text-white" style="border:none" id="about-us-btn">
+                        <span class="icon">
+                            <i class="fas fa-user-friends"></i>
+                        </span>
+                        <span>
+                            About Us
+                        </span> 
+                    </button>
+                    <div class="modal" id="about-us-modal">
+                        <div class="modal-background"></div>
+                        <div class="modal-card">
+                            <header class="modal-card-head has-background-success-dark">
+                                <p class="modal-card-title has-text-centered has-text-white">About Us</p>
+                                <button class="delete" id="about-us-close" aria-label="close"></button>
+                            </header>
+                            <section class="modal-card-body has-background-success-light has-text-black">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            </section>
+                        </div>
+                    </div>
+                </div>
+                <div class="navbar-item has-text-white is-size-3">
+                    <button class="button has-icons-left has-background-success-dark has-text-white" style="border:none" id="contact-us-btn">
+                        <span class="icon">
+                            <i class="fas fa-envelope"></i>
+                        </span>
+                        <span>
+                            Contact Us
+                        </span>   
+                    </button>
+                    <div class="modal" id="contact-us-modal">
+                        <div class="modal-background"></div>
+                        <div class="modal-card">
+                            <header class="modal-card-head has-background-success-dark">
+                                <p class="modal-card-title has-text-centered has-text-white">Contact Us</p>
+                                <button class="delete" id="contact-us-close" aria-label="close"></button>
+                            </header>
+                            <section class="modal-card-body has-background-success-light has-text-black">
+                                <h3>Project Member 1:</h3>
+                                <ul>
+                                    <li>
+                                        <a href="githubrepositoryhere">GitHub</a>
+                                    </li>
+                                    <li><a href="mailto:(your email here)">Email</a></li>
+                                </ul>
+                                <h3>Project Member 1:</h3>
+                                <ul>
+                                    <li>
+                                        <a href="githubrepositoryhere">GitHub</a>
+                                    </li>
+                                    <li><a href="mailto:(your email here)">Email</a></li>
+                                </ul>
+                                <h3>Project Member 1:</h3>
+                                <ul>
+                                    <li>
+                                        <a href="githubrepositoryhere">GitHub</a>
+                                    </li>
+                                    <li><a href="mailto:(your email here)">Email</a></li>
+                                </ul>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </nav>
 
-    <section class="hero is-fullheight-with-navbar">
-        <div class="hero-body mt-0">
-          <p class="title has-text-white is-size-1">
-            What kind of weekend will you like to have?
-          </p>
+
+<section class="hero is-fullheight-with-navbar">
+     <div class="hero-body container">
+       <div class="hero-title has-background-dark mb-6">
+          <p class="title is-size-2 has-text-white">What weekend adventures await for you and your dog?</p>
+         </div>
+         <div class="hero-subtitile has-background-dark mb-5">
+             <p class="subtitle is-size-3 has-text-white">Search National parks or Local Dog parks near you!
+             </p>
+            </div>
+         <div class="field has-addons">
+            <div class="control">
+              <input class="input" type="text" placeholder="Adventure is out there!">
+            </div>
+            <div class="control">
+              <a class="button is-success">Search</a>
+            </div> 
         </div>
-      </section>
+    </div>
+</section>
+
+  
+    <script src="./js/home.js"></script>
 
 </body>
+
 </html>

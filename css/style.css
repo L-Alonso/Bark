@@ -1,7 +1,4 @@
-.hero-body{
-    background-image: url("https://wallpapercave.com/wp/wp1889002.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-
+.hero .container{   
+    flex-direction: column;
+    justify-content: center;
 }
