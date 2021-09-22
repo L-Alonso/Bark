@@ -16,5 +16,4 @@ $("#contact-us-btn").click(function() {
 // close contact us info
 $("#contact-us-close").click(function() {
     $("#contact-us-modal").removeClass("is-active")
-});©
-2021 GitHub, Inc.
+});
