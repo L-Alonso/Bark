@@ -11,11 +11,7 @@ var selectedPark = null;
 var map = null;
 var npsApiKey = "BccmWNanuJv5sB3a6yzsSqXUZVNxkR7YdgC6BACq";
 var mapApiKey = "AIzaSyA6PPvRcVtW9IYbZoNZHRNLzv369862KVs";
-var searchDogParkEl = $("#dog-park-search")
-var dogParkNameEl = $("#dog-park-name")
-var dogParkDescEl = $("#dog-park-description")
-var dogParkUrl = $("#google-website")
-var dogParkInfoEl = $("#dog-park-info")
+
 
 // get latitude and longitude from NPS api for google map to reference
 function initMap(lat, lng) {
@@ -74,64 +70,10 @@ function parkSearch(parkName) {
         });
 }
 
-//search for dog park names in Google api
-function dogParkSearch(dogPark) {
-    var parkUrl = `https://maps.googleapis.com/maps/api/place/findplacefromtext/json
-    ?fields=formatted_address%2Cname%2Crating%2Copening_hours%2Cgeometry
-    &input=${dogPark}
-    &inputtype=textquery
-    &key=${mapApiKey}`;
-    fetch(parkUrl).then(function(response) {
-        // request was succesful
-
-        if (response.ok) {
-            response.json().then(function(results) {
-                console.log(results);
-                for (i = 0; i < results.data.length; i++) {
-                    addSearchResult(results.data[i]);
-                }
-            });
-        } else {
-            console.log("Received unexpected response: " + response.status);
-        }
-    })
-    .catch(function(error) {
-        console.error(error);
-    });
-
-}
-// display fetched google info and google map (dog park)
-function showDogParkInfo() {
-    dogParkInfoEl.show();
-    dogParkNameEl.text(selectedPark.fullName);
-    dogParkDescEl.text(selectedPark.description);
-    dogParkUrl.attr("href", selectedPark.url);
-    initMap(Number(selectedPark.latitude), Number(selectedPark.longitude));
-}
-// clear search result
-function clearSearchResults() {
-    $(".search-result").remove();
-}
-// create new div for each search result (dog park)
-function addSearchResult(result) {
-    var searchResult = $("<div>");
-    searchResult.addClass("panel-block search-result");
-    var searchResultBtn = $("<button>");
-    searchResultBtn.addClass("button is-white");
-    searchResultBtn.text(result.fullName);
-    searchResult.append(searchResultBtn);
-    searchPanel.append(searchResult);
-    searchResultBtn.click(function() {
-        selectedPark = result;
-        showParkInfo();
-        clearSearchResults();
-    })
-}
-
-// begin park name search on button click
+// begin national park name search on button click
 $("#search-btn").click(function() {
     var searchInput = searchParkEl.val();
-    dogSearch(searchInput);
+    parkSearch(searchInput);
 });
 
 // show about us info when button is clicked on navbar
