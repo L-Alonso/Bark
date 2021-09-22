@@ -1,4 +1,4 @@
-# project-1
+# Bark
 
 ## Purpose
 A web application designed to provide dog owners with a resource to facilitate finding local city or national parks, 
