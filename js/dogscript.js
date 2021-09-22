@@ -131,7 +131,7 @@ function addSearchResult(result) {
 // begin park name search on button click
 $("#search-btn").click(function() {
     var searchInput = searchParkEl.val();
-    dogSearch(searchInput);
+    dogParkSearch(searchInput);
 });
 
 // show about us info when button is clicked on navbar
