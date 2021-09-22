@@ -8,7 +8,13 @@ and other canine-friendly venues to enjoy with their furry friends.
 * HTML 
 * Bulma
 * JavaScript 
+<<<<<<< HEAD
 * Google Places (https://developers.google.com/maps)
+=======
+* JQuery
+* FontAwesome
+* Google Places and Google Maps (https://developers.google.com/maps)
+>>>>>>> develop
 * National Park Service API (https://www.nps.gov/subjects/developer/index.htm)
 
 ## Website 

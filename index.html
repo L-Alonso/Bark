@@ -6,44 +6,136 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title></title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
 </head>
 
-<body class="has-background-success-light" style="background-image: url(https://images.unsplash.com/photo-1473448912268-2022ce9509d8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80;);">
-    <nav class="navbar has-background-success-dark has-navbar-fixed-top" role="navigation" aria-label="main navigation">
+<body class="has-navbar-fixed-top has-background-success-light" style="background-image: url(https://images.unsplash.com/photo-1473448912268-2022ce9509d8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80;);">
+    <nav class="navbar is-fixed-top has-background-success-dark" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
-            <h1 class="navbar-item has-text-white is-size-3">
+            <span class="navbar-item has-text-white is-size-3"></h1>
                 Project-1
-            </h1>
+            </span>
         </div>
         <div class="navbar-menu">
-            <a class="navbar-item has-text-white is-size-5" href="">
-                Home
-            </a>
-        </div>
-    </nav>
-    <hero class="is-fullheight">
-        <section class="m-6">
-            <div class="tile is-ancestor p-3">
-                <div class="tile is-5 is-vertical is-parent">
-                    <article class="tile is-child box">
-                        <p class="title block has-text-centered" id="nat-park-name"></p>
-                        <p class="subtitle is-2 has-text-centered">Here are all the dog friendly parks in Portland! </p>
-                        <figure class="has-text-centered" id="nat-park-amenities">
-                        </figure>
-                    </article>
+            <div class="navbar-start">
+            </div>
+            <div class="navbar-end">
+                <div class="navbar-item has-text-white is-size-3">
+                    <a class="button has-icons-left has-background-success-dark has-text-white" style="border:none" href="">
+                        <span class="icon has-text-white">
+                    <i class="fas fa-home"></i>
+                    </span>
+                        <span>Home</span>
+                    </a>
                 </div>
-                <div class="tile is-7 is-vertical is-parent">
-                    <article class="tile is-child box">
-                        <figure class="image is-square" id="nat-park-map">
-                            <img src="./pictures/Dog Parks Portland.png">
-                        </figure>
-                    </article>
+                <div class="navbar-item has-text-white is-size-3">
+                    <button class="button has-icons-left has-background-success-dark has-text-white" style="border:none" id="about-us-btn">
+                        <span class="icon">
+                            <i class="fas fa-user-friends"></i>
+                        </span>
+                        <span>
+                            About Us
+                        </span> 
+                    </button>
+                    <div class="modal" id="about-us-modal">
+                        <div class="modal-background"></div>
+                        <div class="modal-card">
+                            <header class="modal-card-head has-background-success-dark">
+                                <p class="modal-card-title has-text-centered has-text-white">About Us</p>
+                                <button class="delete" id="about-us-close" aria-label="close"></button>
+                            </header>
+                            <section class="modal-card-body has-background-success-light has-text-black">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            </section>
+                        </div>
+                    </div>
+                </div>
+                <div class="navbar-item has-text-white is-size-3">
+                    <button class="button has-icons-left has-background-success-dark has-text-white" style="border:none" id="contact-us-btn">
+                        <span class="icon">
+                            <i class="fas fa-envelope"></i>
+                        </span>
+                        <span>
+                            Contact Us
+                        </span>   
+                    </button>
+                    <div class="modal" id="contact-us-modal">
+                        <div class="modal-background"></div>
+                        <div class="modal-card">
+                            <header class="modal-card-head has-background-success-dark">
+                                <p class="modal-card-title has-text-centered has-text-white">Contact Us</p>
+                                <button class="delete" id="contact-us-close" aria-label="close"></button>
+                            </header>
+                            <section class="modal-card-body has-background-success-light has-text-black">
+                                <h3>Project Member 1:</h3>
+                                <ul>
+                                    <li>
+                                        <a href="githubrepositoryhere">GitHub</a>
+                                    </li>
+                                    <li><a href="mailto:(your email here)">Email</a></li>
+                                </ul>
+                                <h3>Project Member 1:</h3>
+                                <ul>
+                                    <li>
+                                        <a href="githubrepositoryhere">GitHub</a>
+                                    </li>
+                                    <li><a href="mailto:(your email here)">Email</a></li>
+                                </ul>
+                                <h3>Project Member 1:</h3>
+                                <ul>
+                                    <li>
+                                        <a href="githubrepositoryhere">GitHub</a>
+                                    </li>
+                                    <li><a href="mailto:(your email here)">Email</a></li>
+                                </ul>
+                            </section>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <a class="button is-normal has-background-success-light is-fullwidth" href="https://www.pdxmonthly.com/travel-and-outdoors/best-portland-dog-parks">Learn More About Dog Parks In Portland
+        </div>
+    </nav>
+    <section class="hero mx-6 pt-6 is-mobile is-align-content-center is-fullheight-with-navbar">
+        <div class="tile is-12 is-ancestor p-3">
+            <div class="tile is-4 is-vertical is-parent">
+                <article class="tile box is-child has-background-white" style="height: fit-content;">
+                    <div class="panel" id="search-panel">
+                        <div class="panel-block is-justify-content-center">
+                            <div class="field has-addons is-flex-grow-1">
+                                <div class="control has-icons-left is-flex-grow-1">
+                                    <span class="icon">
+                                        <i class="fas fa-search" aria-hidden="true"></i>
+                                    </span>
+                                    <input class="input" id="park-search" type="text" placeholder="Search for dog parks">
+                                </div>
+                                <div class="control">
+                                    <button class="button is-success" id="search-btn">
+                                        Search
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="dog-park-info" style="display:none">
+                        <p class="title block has-text-centered" id="dog-park-name"></p>
+                        <p class="has-text-centered" id="dog-park-description"></p>
+                    </div>
+                </article>
+            </div>
+            <div class="tile is-8 is-vertical is-parent" id="map-container" style="display:none">
+                <article class="tile box is-child has-background-white" style="height: fit-content;">
+                    <div id="nat-park-map" style="height:500px;">
+                    </div>
+                </article>
+            </div>
+        </div>
+        <a class="button is-normal has-background-success-light is-fullwidth" id="nps-website" href="https://www.nps.gov/index.htm" target="_blank">Learn More
             </a>
-        </section>
-    </hero>
+    </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA6PPvRcVtW9IYbZoNZHRNLzv369862KVs&v=weekly" async></script>
+    <script src="./js/dogscript.js"></script>
 
 </body>
 
