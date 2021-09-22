@@ -18,7 +18,6 @@ $("#contact-us-close").click(function() {
     $("#contact-us-modal").removeClass("is-active")
 });
 
-
 document.getElementById('').onsubmit = function() {
     window.location = '' + document.getElementById('test').value;
     return false;

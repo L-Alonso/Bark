@@ -68,6 +68,9 @@ function parkSearch(parkName) {
         .catch(function(error) {
             console.error(error);
         });
+        localStorage.setItem(parkName, parkName );
+        var parkPlace = localStorage.getItem(parkName)
+        alert("Enjoy Your Adventure to " + parkPlace)
 }
 
 // begin national park name search on button click

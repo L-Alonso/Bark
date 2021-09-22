@@ -4,13 +4,14 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Dog Parks</title>
+    <title>Home</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer"
     />
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
-<body class="has-navbar-fixed-top has-background-success-light" style="background-image: url(https://images.unsplash.com/photo-1473448912268-2022ce9509d8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80;);">
+<body class="has-navbar-fixed-top has-background-success-light" style="background-image: url(https://wallpapercave.com/wp/wp1889002.jpg);">
     <nav class="navbar is-fixed-top has-background-success-dark" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
             <span class="navbar-item has-text-white is-size-3"></h1>
@@ -69,21 +70,21 @@
                                 <button class="delete" id="contact-us-close" aria-label="close"></button>
                             </header>
                             <section class="modal-card-body has-background-success-light has-text-black">
-                                <h3>Project Member 1:</h3>
+                                <h3>Luis Gallardo:</h3>
                                 <ul>
                                     <li>
                                         <a href="githubrepositoryhere">GitHub</a>
                                     </li>
                                     <li><a href="mailto:(your email here)">Email</a></li>
                                 </ul>
-                                <h3>Project Member 1:</h3>
+                                <h3>Shayne Lemons:</h3>
                                 <ul>
                                     <li>
-                                        <a href="githubrepositoryhere">GitHub</a>
+                                        <a href="https://github.com/SLemons6">GitHub</a>
                                     </li>
-                                    <li><a href="mailto:(your email here)">Email</a></li>
+                                    <li><a href="mailto:lemonsshayne6@gmail.com">Email</a></li>
                                 </ul>
-                                <h3>Project Member 1:</h3>
+                                <h3>Ben Tantillo:</h3>
                                 <ul>
                                     <li>
                                         <a href="githubrepositoryhere">GitHub</a>
@@ -97,46 +98,30 @@
             </div>
         </div>
     </nav>
-    <section class="hero mx-6 pt-6 is-mobile is-align-content-center is-fullheight-with-navbar">
-        <div class="tile is-12 is-ancestor p-3">
-            <div class="tile is-4 is-vertical is-parent">
-                <article class="tile box is-child has-background-white" style="height: fit-content;">
-                    <div class="panel" id="search-panel">
-                        <div class="panel-block is-justify-content-center">
-                            <div class="field has-addons is-flex-grow-1">
-                                <div class="control has-icons-left is-flex-grow-1">
-                                    <span class="icon">
-                                        <i class="fas fa-search" aria-hidden="true"></i>
-                                    </span>
-                                    <input class="input" id="park-search" type="text" placeholder="Search for dog parks">
-                                </div>
-                                <div class="control">
-                                    <button class="button is-success" id="search-btn">
-                                        Search
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="dog-park-info" style="display:none">
-                        <p class="title block has-text-centered" id="dog-park-name"></p>
-                        <p class="has-text-centered" id="dog-park-description"></p>
-                    </div>
-                </article>
+
+
+    <section class="hero is-fullheight-with-navbar">
+        <div class="hero-body container">
+            <div class="hero-title has-background-dark mb-6">
+                <p class="title is-size-2 has-text-white">What weekend adventures await for you and your dog?</p>
             </div>
-            <div class="tile is-8 is-vertical is-parent" id="map-container" style="display:none">
-                <article class="tile box is-child has-background-white" style="height: fit-content;">
-                    <div id="nat-park-map" style="height:500px;">
-                    </div>
-                </article>
+            <div class="hero-subtitile has-background-dark mb-5">
+                <p class="subtitle is-size-3 has-text-white">Search National parks or Local Dog parks near you!
+                </p>
+            </div>
+            <div class="field has-addons">
+                <div class="control">
+                    <input class="input" type="text" placeholder="Adventure is out there!">
+                </div>
+                <div class="control">
+                    <a href="national-parks.html" class="button is-success">Search</a>
+                </div>
             </div>
         </div>
-        <a class="button is-normal has-background-success-light is-fullwidth" id="nps-website" href="https://www.nps.gov/index.htm" target="_blank">Learn More
-            </a>
     </section>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA6PPvRcVtW9IYbZoNZHRNLzv369862KVs&v=weekly" async></script>
-    <script src="./js/dogscript.js"></script>
+    <script src="./js/home.js"></script>
 
 </body>
 
