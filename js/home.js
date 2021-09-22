@@ -16,9 +16,5 @@ $("#contact-us-btn").click(function() {
 // close contact us info
 $("#contact-us-close").click(function() {
     $("#contact-us-modal").removeClass("is-active")
-});
-
-document.getElementById('').onsubmit = function() {
-    window.location = '' + document.getElementById('test').value;
-    return false;
-}
+});©
+2021 GitHub, Inc.
