@@ -14,10 +14,10 @@ and other canine-friendly venues to enjoy with their furry friends.
 * National Park Service API (https://www.nps.gov/subjects/developer/index.htm)
 
 ## Website 
-https://btantillo.github.io/bark
+https://btantillo.github.io/Bark/
 
 <img src="./images/home-page screenshot.jpg" alt="Screenshot of homepage"/>
-<img src="./images/home-page screenshot.jpg" alt="Screenshot of national park page"/>
+<img src="./images/nat-park screenshot.jpg" alt="Screenshot of national park page"/>
 
 ## Contribution 
 Made by Luis Gallardo, Shayne Lemons, and Ben Tantillo
