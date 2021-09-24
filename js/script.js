@@ -11,6 +11,7 @@ var selectedPark = null;
 var map = null;
 var npsApiKey = "BccmWNanuJv5sB3a6yzsSqXUZVNxkR7YdgC6BACq";
 var mapApiKey = "AIzaSyA6PPvRcVtW9IYbZoNZHRNLzv369862KVs";
+var parkPlace = JSON.stringify(localStorage.getItem('park'));
 
 
 // get latitude and longitude from NPS api for google map to reference
@@ -27,6 +28,7 @@ function showParkInfo() {
     natParkNameEl.text(selectedPark.fullName);
     natParkDescEl.text(selectedPark.description);
     natParkUrl.attr("href", selectedPark.url);
+    natParkUrl.text("Learn More About " + parkPlace);
     initMap(Number(selectedPark.latitude), Number(selectedPark.longitude));
 }
 // clear search result
@@ -46,6 +48,7 @@ function addSearchResult(result) {
         selectedPark = result;
         showParkInfo();
         clearSearchResults();
+        localStorage.setItem('park', selectedPark.fullName)
     })
 }
 
@@ -68,7 +71,6 @@ function parkSearch(parkName) {
         .catch(function(error) {
             console.error(error);
         });
-    localStorage.setItem(parkName, parkName);
 
 
 }
@@ -78,7 +80,12 @@ function parkSearch(parkName) {
 $("#search-btn").click(function() {
     var searchInput = searchParkEl.val();
     parkSearch(searchInput);
+    local
 
+});
+
+$("#nps-website").click(function() {
+    localStorage.clear();
 });
 
 // show about us info when button is clicked on navbar
